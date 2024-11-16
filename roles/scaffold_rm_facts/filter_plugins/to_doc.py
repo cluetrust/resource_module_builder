@@ -74,7 +74,7 @@ def get_ansible_metadata(spec, _path):
         raise AnsibleFilterError("value of element 'ANSIBLE_METADATA'"
                                  " should be of type string")
 
-    add('ANSIBLE_METADATA = %s' % metadata, newline=True)
+    add('ANSIBLE_METADATA = %s' % metadata.replace('\'','"').replace('"\n', '",\n'), newline=True)
     # add(metadata)
 
 
