@@ -64,6 +64,7 @@ def main():
         supports_check_mode=True,
         mutually_exclusive=mutually_exclusive,
     )
+
     result = {{ resource|capitalize }}(module).execute_module()
     module.exit_json(**result)
 
