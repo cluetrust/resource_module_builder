@@ -103,10 +103,14 @@ def get_examples(spec, path):
 
     add('EXAMPLES = """')
     dir_name = os.path.dirname(path)
+    first = True
     for item in to_list(spec['EXAMPLES']):
+        if first:
+            first = False
+        else:
+            add('\n')
         with open(os.path.join(dir_name, item)) as fileh:
             add(fileh.read().strip("\n"))
-        add("\n")
     add('"""')
 
 
