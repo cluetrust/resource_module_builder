@@ -21,7 +21,7 @@ SECTIONS = ('ANSIBLE_METADATA', 'DOCUMENTATION', 'EXAMPLES', 'RETURN')
 
 DOC_SECTION_SANITIZE = ('mutually_exclusive', 'required_together',
                         'required_one_of', 'supports_check_mode',
-                        'required_if')
+                        'required_if','no_log')
 
 DEFAULT_RETURN = """
 before:
